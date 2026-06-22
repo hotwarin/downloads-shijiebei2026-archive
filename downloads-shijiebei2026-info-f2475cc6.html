@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+  <title>世界杯 · 快速识别与入口引导</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f7f4ef;
+      font-family: "Noto Sans SC", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #2b2b2b;
+      line-height: 1.6;
+      padding: 2rem 1rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .page-wrap {
+      max-width: 880px;
+      margin: 0 auto;
+      width: 100%;
+      background-color: #fcfaf6;
+      padding: 2.2rem 2rem 3rem;
+      border-radius: 24px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04), 0 1px 4px rgba(0, 0, 0, 0.02);
+      flex: 1;
+    }
+
+    /* hero 区 */
+    .hero {
+      margin-bottom: 3rem;
+      border-bottom: 1px solid #ede7dd;
+      padding-bottom: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #1f1f1f;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero .sub {
+      font-size: 1.1rem;
+      color: #5a5a5a;
+      max-width: 70%;
+      margin-bottom: 1.6rem;
+    }
+
+    .hero .insight {
+      background: #efebe5;
+      padding: 1rem 1.4rem;
+      border-radius: 20px;
+      display: inline-block;
+      font-size: 0.95rem;
+      color: #3d3d3d;
+      border-left: 4px solid #c3a67a;
+    }
+
+    .hero .insight strong {
+      font-weight: 600;
+      color: #7a5c3a;
+    }
+
+    /* 通用区块 */
+    section {
+      margin-bottom: 2.8rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-bottom: 1.2rem;
+      color: #1f1f1f;
+      border-left: 4px solid #c3a67a;
+      padding-left: 1rem;
+    }
+
+    .desc-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .desc-card {
+      background: #f8f5f0;
+      padding: 1.2rem 1.4rem;
+      border-radius: 16px;
+      flex: 1 1 200px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.02);
+    }
+
+    .desc-card h3 {
+      font-size: 1.15rem;
+      font-weight: 500;
+      margin-bottom: 0.4rem;
+      color: #2f2f2f;
+    }
+
+    .desc-card p {
+      font-size: 0.95rem;
+      color: #4a4a4a;
+    }
+
+    .target-box {
+      background: #ede7dd;
+      padding: 1.5rem 1.8rem;
+      border-radius: 20px;
+      margin: 2rem 0 1.8rem;
+      border: 1px solid #e2d9cc;
+    }
+
+    .target-box p {
+      font-size: 1.05rem;
+      max-width: 80%;
+    }
+
+    .faq-summary {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .faq-item {
+      padding: 1rem 1.2rem;
+      background: #fbf9f5;
+      border-radius: 16px;
+      border-left: 3px solid #cbb69a;
+    }
+
+    .faq-item .q {
+      font-weight: 500;
+      margin-bottom: 0.3rem;
+    }
+
+    .faq-item .a {
+      color: #4e4e4e;
+      font-size: 0.95rem;
+    }
+
+    .bottom-link {
+      margin-top: 2.8rem;
+      padding-top: 1.8rem;
+      border-top: 1px solid #e5ddd2;
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    .bottom-link p {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    a {
+      color: #7a5c3a;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid #cbb69a;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    a:hover {
+      color: #3f2e1c;
+      border-bottom-color: #3f2e1c;
+    }
+
+    /* 响应式 */
+    @media (max-width: 600px) {
+      .page-wrap {
+        padding: 1.5rem 1rem 2rem;
+      }
+
+      .hero h1 {
+        font-size: 1.9rem;
+      }
+
+      .hero .sub {
+        max-width: 100%;
+      }
+
+      .target-box p {
+        max-width: 100%;
+      }
+
+      .desc-grid {
+        flex-direction: column;
+      }
+
+      .faq-item {
+        padding: 0.8rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrap">
+  <!-- hero 区 -->
+  <div class="hero">
+    <h1>世界杯 · 即刻定位</h1>
+    <p class="sub">一个为球迷与信息寻求者准备的集中指向页面，省去反复搜寻的精力。</p>
+    <div class="insight">
+      <strong>核心锚点：</strong> 本页仅作为官方资源的外部索引，不存储赛事内容，不提供直播或下载文件。所有指向均汇总于一个地址。
+    </div>
+  </div>
+
+  <!-- 优势区：网站用途快速拆解 -->
+  <section>
+    <h2>定位逻辑 · 三重视角</h2>
+    <div class="desc-grid">
+      <div class="desc-card">
+        <h3>① 标识优先</h3>
+        <p>一眼确认：该站点与 <strong>世界杯</strong> 直接关联。域名结构清晰，不含模糊词缀，便于记忆与分享。</p>
+      </div>
+      <div class="desc-card">
+        <h3>② 功能聚焦</h3>
+        <p>不堆积无关内容。页面仅承载一项任务：提供通往 世界杯 数字资源的简明路径，减少决策负担。</p>
+      </div>
+      <div class="desc-card">
+        <h3>③ 信任提示</h3>
+        <p>通过静态页面+明确声明，降低信息噪音。无弹窗，无诱导，适合作为书签或默认起始参考点。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 说明区：站点边界与适用场景 -->
+  <section>
+    <h2>适用场景说明</h2>
+    <div class="target-box">
+      <p>✔ 当你需要快速验证某个链接是否与 <a href="https://downloads-shijiebei2026.com">世界杯</a> 相关，或希望以最低认知成本找到该领域的一级入口时，此页可作为跳板。<br>
+      ✔ 内容面向具备基本网络判断力的用户，不设自动跳转，所有点击由你决定。</p>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 0.5rem;">
+      <div style="flex:1; min-width:200px; background: #f3efe8; padding: 1rem; border-radius: 16px;">
+        <span style="font-weight: 500;">使用节奏</span><br>
+        适合置于浏览器书签栏或笔记中。每次访问仅作路径验证，而非内容消费。
+      </div>
+      <div style="flex:1; min-width:200px; background: #f3efe8; padding: 1rem; border-radius: 16px;">
+        <span style="font-weight: 500;">信息边界</span><br>
+        本站不收集数据，不设评论区。所有外部链接均以纯文本形式标记，无追踪参数。
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ 摘要 -->
+  <section>
+    <h2>常见疑问 · 摘要</h2>
+    <div class="faq-summary">
+      <div class="faq-item">
+        <div class="q">▸ 这个页面提供下载或直播吗？</div>
+        <div class="a">不直接提供。页面作为索引，帮助你识别与 世界杯 相关的资源位置。具体文件或服务需在目标站点内自行判断。</div>
+      </div>
+      <div class="faq-item">
+        <div class="q">▸ 链接点开后是什么？</div>
+        <div class="a">指向 <a href="https://downloads-shijiebei2026.com">世界杯</a> 域名下的内容。该域名的实际内容由第三方维护，本页仅作导航用途。</div>
+      </div>
+      <div class="faq-item">
+        <div class="q">▸ 页面为什么会存在？</div>
+        <div class="a">为了降低“回忆域名+验证真伪”的摩擦。在需要快速定位时，一个静态、克制的介绍页比搜索引擎结果更省时。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 底部链接嵌入（自然融入句子） -->
+  <div class="bottom-link">
+    <p>如果你希望直接进入该站点浏览，可以跟随上方或此处提到的 <a href="https://downloads-shijiebei2026.com">世界杯</a> 链接。所有信息均以目标页面为准，本页仅作辅助识别。</p>
+    <p style="margin-top: 1.2rem; font-size: 0.85rem; color: #7c7c7c;">—— 简洁索引 · 中立指向 · 无冗余 ——</p>
+  </div>
+</div>
+</body>
+</html>
